@@ -1,262 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zero Day Exploit</title>
-  <meta name="description" content="A futuristic and satirical Hacking Game" />
-  <style>
-    :root {
-      --bg: #0b0f17;
-      --card: #0f1724;
-      --accent: #39ff14;
-      --muted: #9aa4b2;
-      --glass: rgba(255, 255, 255, 0.03)
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Day Exploit | Home</title>
 
-    * {
-      box-sizing: border-box
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, var(--bg), #071025);
-      color: #e6eef6
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 28px auto;
-      padding: 20px
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between
-    }
-
-    .brand {
-      display: flex;
-      gap: 12px;
-      align-items: center
-    }
-
-    .logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 10px;
-      background: var(--glass);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px
-    }
-
-    p.lead {
-      color: var(--muted);
-      margin-top: 6px
-    }
-
-    .main {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 20px;
-      margin-top: 20px
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6)
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 12px
-    }
-
-    .btn {
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 0;
-      background: var(--accent);
-      color: white;
-      cursor: pointer
-    }
-
-    nav ul {
-      display: flex;
-      gap: 12px;
-      list-style: none;
-      padding: 0;
-      margin: 0
-    }
-
-    footer {
-      margin-top: 30px;
-      color: var(--muted);
-      font-size: 13px
-    }
-
-    label {
-      display: block;
-      font-size: 13px;
-      margin-top: 10px;
-      color: var(--muted)
-    }
-
-    input[type=text],
-    input[type=email],
-    textarea,
-    select {
-      width: 100%;
-      padding: 8px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      background: transparent;
-      color: inherit
-    }
-
-    textarea {
-      min-height: 80px
-    }
-
-    .feature-row {
-      display: flex;
-      gap: 8px;
-      align-items: center
-    }
-
-    .small {
-      font-size: 12px;
-      color: var(--muted)
-    }
-
-    @media (max-width:980px) {
-      .main {
-        grid-template-columns: 1fr
-      }
-
-      .brand h1 {
-        font-size: 20px
-      }
-    }
-
-    /* Placeholder for animations */
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.1), transparent 70%)
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index_style.css" />
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" id="logo-text">ZDE</div>
-        <div>
-          <h1 id="site-title">Zero Day Exploit</h1>
-          <p class="lead" id="site-lead">A futuristic and satirical Hacking Game</p>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#legal">Legal</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <div class="main">
-      <main>
-        <section class="card" id="hero-card">
-          <h2 id="hero-title">HACK THE WORLD</h2>
-          <p id="hero-text">1</p>
-          <div class="actions">
-            <button class="btn" id="primary">Gamers Here</button>
-            <button class="btn" style="background:transparent;border:1px solid rgba(57,255,20,0.2)" id="secondary">Wanna
-              Contribute</button>
-          </div>
-        </section>
+  <!-- ============================
+       HEADER
+  ============================= -->
+  <header>
+    <div class="logo">Zero Day Exploit</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="media.html">Media Gallery</a>
+      <a href="download.html">Download</a>
+      <a href="socials.html">Socials</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal.html">Legal</a>
+      <a href="contribute.html">Contribute</a>
+    </nav>
+  </header>
 
-        <section id="about" class="card" style="margin-top:14px">
-          <h3>About</h3>
-          <p id="about-text" style="color:var(--muted)">Zero Day Exploit is a futuristic hacking game where players
-            explore digital worlds, uncover vulnerabilities, and manipulate systems. Combining realism, satire, and a
-            compelling story, the game challenges players to think critically about technology and society. Join a
-            community of gamers and developers to experience the thrill of cyber exploits in a playful yet
-            thought-provoking environment.</p>
-        </section>
+  <!-- ============================
+       HERO SECTION
+  ============================= -->
+  <section class="hero" id="home">
+    <h1 id="hero-text">Zero Day Exploit</h1>
 
-        <section id="features"
-          style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
-          <div class="card">
-            <h4 class="feature-title">Story</h4>
-            <p class="lead feature-desc">Follow a compelling futuristic hacking storyline.</p>
-          </div>
-          <div class="card">
-            <h4 class="feature-title">Realism</h4>
-            <p class="lead feature-desc">Experience realistic cyber mechanics and system interactions.</p>
-          </div>
-          <div class="card">
-            <h4 class="feature-title">Satire</h4>
-            <p class="lead feature-desc">A satirical take on modern tech culture and hacking.</p>
-          </div>
-          <div class="card">
-            <h4 class="feature-title">Critique to Society</h4>
-            <p class="lead feature-desc">Challenge societal norms and corporate systems through gameplay.</p>
-          </div>
-        </section>
-
-        <section id="contact" class="card" style="margin-top:14px">
-          <h3>Contact</h3>
-          <p id="contact-text" style="color:var(--muted)">Join our Discord: <a href="https://discord.gg/ZmUcwZXC"
-              target="_blank" style="color:var(--accent)">https://discord.gg/ZmUcwZXC</a></p>
-        </section>
-
-        <section id="legal" class="card" style="margin-top:14px">
-          <h3>Legal</h3>
-          <p style="color:var(--muted)">Impressum and Privacy Policy placeholders — content will be added later.</p>
-        </section>
-      </main>
-
-      <aside class="card">
-        <h3>Coming Soon</h3>
-        <p class="small">Social icons and additional interactive elements will be implemented soon.</p>
-      </aside>
+    <div class="hero-buttons">
+      <a href="download.html" class="cta-btn">Play Now</a>
+      <a href="about.html" class="cta-btn">Learn More</a>
     </div>
+  </section>
 
-    <footer>
-      <p>© <span id="year">2025</span> Zero Day Exploit — All rights reserved.</p>
-    </footer>
-  </div>
+  <!-- ============================
+       TERMINAL
+  ============================= -->
+  <section id="terminal-section">
+    <div id="terminal"></div>
+  </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('primary').addEventListener('click', () => alert('Gamers Here button clicked — action to be defined.'));
-    document.getElementById('secondary').addEventListener('click', () => alert('Wanna Contribute button clicked — action to be defined.'));
-  </script>
+  <!-- ============================
+       JS
+  ============================= -->
+  <script src="js/index_js.js"></script>
+
 </body>
 
 </html>
-<!--test-->
-<!--test-->

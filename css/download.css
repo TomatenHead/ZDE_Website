@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+}
+
+body {
+    background: linear-gradient(135deg, #001a00, #004466);
+    color: white;
+    min-height: 100vh;
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00ffcc;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #00ff99;
+    color: #000;
+    padding: 14px 26px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    background: #00ffaa;
+}
+
+h2 {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.log-box {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.log-entry {
+    border-left: 3px solid #00ffaa;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.log-entry h3 {
+    color: #00ffaa;
+    margin-bottom: 5px;
+}
+
+.log-entry a {
+    color: #00ddff;
+    text-decoration: none;
+}
+
+.log-entry a:hover {
+    text-decoration: underline;
+}
