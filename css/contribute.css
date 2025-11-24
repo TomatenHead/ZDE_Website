@@ -1,0 +1,55 @@
+/* Contribute page boxes */
+.contribute-section {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.contrib-box {
+    background: #000000aa;
+    border: 1px solid #00ffaa55;
+    box-shadow: 0 0 12px #00ffcc55;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 6px;
+}
+
+.contrib-box h2 {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+    margin-bottom: 15px;
+}
+
+.contrib-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contrib-box ul li {
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #00ffcc55;
+    padding: 10px;
+}
+
+th {
+    background: #003333;
+    color: #00ffcc;
+}
+
+tr:hover {
+    background: #002222;
+}
