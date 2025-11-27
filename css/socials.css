@@ -1,0 +1,120 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #020d0f;
+    color: white;
+    animation: bgPulse 6s infinite alternate ease-in-out;
+}
+
+/* Hintergrund Farbtransition */
+@keyframes bgPulse {
+    0% {
+        background-color: #001a1a;
+    }
+
+    50% {
+        background-color: #003344;
+    }
+
+    100% {
+        background-color: #004455;
+    }
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ffaa55;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaffee;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+header nav a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+    text-align: center;
+    padding: 140px 40px 80px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #aaffee;
+    font-size: 18px;
+}
+
+/* ================================
+   BUTTON SECTION
+================================ */
+.widget-buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 14px 32px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background: #00ffcc;
+    border-radius: 6px;
+    transition: 0.2s;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.cta-btn:hover {
+    background: #00ffee;
+    box-shadow: 0 0 14px #00ffee;
+}

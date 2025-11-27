@@ -1,52 +1,72 @@
-// -------- RELEASES --------
-fetch("https://api.github.com/repos/TomatenHead/Zero_Day_Exploit/releases")
+const repoOwner = "TomatenHead";
+const repoName = "Zero_Day_Exploit";
+
+// ---------- RELEASES ----------
+fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/releases`)
     .then(res => res.json())
     .then(releases => {
         const container = document.getElementById("releaseContainer");
-
-        if (!Array.isArray(releases) || releases.length === 0) {
+        if (!releases || releases.length === 0) {
             container.innerHTML = "<p>No releases found.</p>";
             return;
         }
+        releases.forEach(release => {
+            const div = document.createElement("div");
+            div.className = "log-entry";
 
-        releases.forEach(r => {
-            const el = document.createElement("div");
-            el.classList.add("log-entry");
+            const title = document.createElement("h3");
+            title.textContent = `${release.tag_name} — ${new Date(release.published_at).toLocaleDateString()}`;
 
-            el.innerHTML = `
-        <h3>${r.name || "Unnamed Release"} — ${new Date(r.published_at).toLocaleDateString()}</h3>
-        <p>${r.body ? r.body.replace(/\n/g, "<br>") : "No changelog provided."}</p>
-        <a href="${r.html_url}" target="_blank">View Release</a>
-      `;
+            const body = document.createElement("p");
+            body.textContent = release.body || "No description available.";
 
-            container.appendChild(el);
+            const link = document.createElement("a");
+            link.href = release.html_url;
+            link.target = "_blank";
+            link.textContent = "View on GitHub";
+
+            div.appendChild(title);
+            div.appendChild(body);
+            div.appendChild(link);
+            container.appendChild(div);
         });
     })
-    .catch(err => console.error("Release Error:", err));
+    .catch(err => {
+        console.error(err);
+        document.getElementById("releaseContainer").innerHTML = "<p>Failed to load releases.</p>";
+    });
 
-
-// -------- COMMITS --------
-fetch("https://api.github.com/repos/TomatenHead/Zero_Day_Exploit/commits?per_page=15")
+// ---------- PUSHES / COMMITS ----------
+fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
     .then(res => res.json())
     .then(commits => {
         const container = document.getElementById("commitContainer");
-
-        if (!Array.isArray(commits)) {
-            container.innerHTML = "<p>Could not load commits.</p>";
+        if (!commits || commits.length === 0) {
+            container.innerHTML = "<p>No commits found.</p>";
             return;
         }
+        commits.slice(0, 10).forEach(commit => {
+            const div = document.createElement("div");
+            div.className = "log-entry";
 
-        commits.forEach(commit => {
-            const el = document.createElement("div");
-            el.classList.add("log-entry");
+            const title = document.createElement("h3");
+            title.textContent = commit.commit.author.name + " — " + new Date(commit.commit.author.date).toLocaleDateString();
 
-            el.innerHTML = `
-        <h3>${commit.commit.author.name} — ${new Date(commit.commit.author.date).toLocaleDateString()}</h3>
-        <p>${commit.commit.message}</p>
-        <a href="${commit.html_url}" target="_blank">View Commit</a>
-      `;
+            const body = document.createElement("p");
+            body.textContent = commit.commit.message;
 
-            container.appendChild(el);
+            const link = document.createElement("a");
+            link.href = commit.html_url;
+            link.target = "_blank";
+            link.textContent = "View Commit";
+
+            div.appendChild(title);
+            div.appendChild(body);
+            div.appendChild(link);
+            container.appendChild(div);
         });
     })
-    .catch(err => console.error("Commit Error:", err));
+    .catch(err => {
+        console.error(err);
+        document.getElementById("commitContainer").innerHTML = "<p>Failed to load commits.</p>";
+    });

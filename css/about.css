@@ -1,0 +1,129 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+}
+
+body {
+    background: #020d0f;
+    color: white;
+    overflow-x: hidden;
+    animation: bgPulse 6s infinite alternate ease-in-out;
+}
+
+@keyframes bgPulse {
+    0% {
+        background-color: #001a1a;
+    }
+
+    50% {
+        background-color: #003344;
+    }
+
+    100% {
+        background-color: #004455;
+    }
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ffaa55;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaffee;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+    padding: 150px 40px 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaffee;
+}
+
+/* ================================
+   ABOUT BOXES
+================================ */
+.about-container {
+    max-width: 1000px;
+    margin: 50px auto 100px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.about-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 20px #00ffcc55;
+    transition: 0.3s;
+}
+
+.about-box h2 {
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.about-box p,
+.about-box li {
+    color: #aaffee;
+    line-height: 1.6;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #00ffee;
+}

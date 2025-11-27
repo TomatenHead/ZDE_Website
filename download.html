@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Day Exploit – Download</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Day Exploit | Download</title>
 
-    <link rel="stylesheet" href="css/download.css">
+    <link rel="stylesheet" href="css/download.css" />
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="logo">Zero Day Exploit</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="devlog.html">Devlog</a>
+            <a href="media.html">Media Gallery</a>
             <a href="download.html" class="active">Download</a>
             <a href="socials.html">Socials</a>
             <a href="contact.html">Contact</a>
@@ -26,26 +26,28 @@
         </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <h1>Download Zero Day Exploit</h1>
-        <p>Always the newest version — fully automated directly from GitHub.</p>
-        <a class="download-btn" href="https://github.com/TomatenHead/Zero_Day_Exploit/archive/refs/heads/main.zip">
-            Download ZIP (Latest Push)
-        </a>
-        <a class="download-btn" href="https://github.com/TomatenHead/Zero_Day_Exploit">
-            View on GitHub
-        </a>
-
+        <p class="sub">Get the latest stable release or the newest push (source code).</p>
+        <a href="https://github.com/TomatenHead/Zero_Day_Exploit/releases/latest" class="cta-btn">Download Latest
+            Release</a>
+        <a href="https://github.com/TomatenHead/Zero_Day_Exploit/archive/refs/heads/main.zip" class="cta-btn">Download
+            Newest Push (Source Code)</a>
     </section>
 
-    <section class="changelogs">
-        <h2>Latest Releases (Changelog)</h2>
-        <div id="releaseContainer" class="log-box"></div>
-    </section>
+    <!-- CHANGELOG & PUSHES -->
+    <section class="changelog">
+        <h2>Recent Pushes (Commits)</h2>
+        <div id="commitContainer" class="log-box">
+            <!-- JS autofills this -->
+        </div>
 
-    <section class="commits">
-        <h2>Latest Pushes / Commits</h2>
-        <div id="commitContainer" class="log-box"></div>
+        <h2>Changelog (Releases)</h2>
+        <div id="releaseContainer" class="log-box">
+            <!-- JS autofills this -->
+        </div>
+
     </section>
 
     <script src="js/download.js"></script>

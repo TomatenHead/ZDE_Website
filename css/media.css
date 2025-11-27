@@ -1,0 +1,116 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+}
+
+body {
+    background: #020d0f;
+    color: white;
+    overflow-x: hidden;
+    animation: bgPulse 6s infinite alternate ease-in-out;
+}
+
+/* Hintergrund Farbtransition (grün <-> hellblau) */
+@keyframes bgPulse {
+    0% {
+        background-color: #001a1a;
+    }
+
+    50% {
+        background-color: #003344;
+    }
+
+    100% {
+        background-color: #004455;
+    }
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ffaa55;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaffee;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+    padding: 120px 40px 60px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ================================
+   MEDIA GALLERY
+================================ */
+.gallery {
+    padding: 40px 20px 80px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.media-item img {
+    width: 100%;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #00ffcc55;
+}
+
+.media-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00ffee77;
+}
