@@ -1,0 +1,157 @@
+/* ================================
+   GLOBAL STYLES (like other pages)
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+}
+
+body {
+    background: #020d0f;
+    color: white;
+    overflow-x: hidden;
+    animation: bgPulse 6s infinite alternate ease-in-out;
+}
+
+@keyframes bgPulse {
+    0% {
+        background-color: #001a1a;
+    }
+
+    50% {
+        background-color: #003344;
+    }
+
+    100% {
+        background-color: #004455;
+    }
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ffaa55;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaffee;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+    padding: 150px 40px 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #aaffee;
+}
+
+/* ================================
+   CONTACT BANNERS
+================================ */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.contact-banner {
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid #00ffcc55;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 18px #00ffcc40;
+    transition: 0.2s;
+}
+
+.contact-banner:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #00ffcc;
+    box-shadow: 0 0 25px #00ffcc80;
+}
+
+.contact-banner h2 {
+    font-size: 40px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.contact-banner p {
+    font-size: 18px;
+    color: #aaffee;
+}
+
+.contact-banner.discord {
+    text-decoration: none;
+}
+
+/* ================================
+   TOAST POPUP
+================================ */
+#toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ffcc;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 0 12px #00ffcc;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+}
+
+#toast.show {
+    opacity: 1;
+}

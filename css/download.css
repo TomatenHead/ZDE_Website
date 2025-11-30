@@ -98,36 +98,46 @@ header nav a.active {
 }
 
 /* ================================
-   CHANGELOG SECTION
+   CHANGELOG SECTION (SIDE-BY-SIDE)
 ================================ */
 .changelog {
-  padding: 40px 0 80px;
+  padding: 40px 40px 80px;
   text-align: center;
 }
 
+/* Titel */
 .changelog h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 15px;
   text-shadow: 0 0 10px #00ffcc;
 }
 
+/* 2-Spalten Layout */
+.changelog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1600px;
+  margin: 40px auto 0;
+}
+
+/* Boxen */
 .log-box {
-  width: 80%;
-  max-width: 900px;
-  margin: auto;
+  width: 100%;
   padding: 25px;
   background: rgba(0, 0, 0, 0.45);
   border: 2px solid #00ffcc55;
   border-radius: 8px;
   box-shadow: 0 0 18px #00ffcc40;
-  margin-bottom: 40px;
+  text-align: left;
 }
 
+/* Einträge */
 .log-entry {
   padding: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   border-left: 3px solid #00ffcc;
-  text-align: left;
 }
 
 .log-entry h3 {
@@ -146,4 +156,11 @@ header nav a.active {
 
 .log-entry a:hover {
   text-decoration: underline;
+}
+
+/* Responsive für Handy */
+@media (max-width: 900px) {
+  .changelog-grid {
+    grid-template-columns: 1fr;
+  }
 }
