@@ -116,3 +116,45 @@ footer {
     border-top: 2px solid #1f3d1f;
     color: #8aff8a;
 }
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ffaa55;
+}
+
+header .logo a {
+    display: inline-block;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 8px #00ffaa;
+    padding: 5px 10px;
+    z-index: 10;
+    position: relative;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaffee;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+header nav a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
