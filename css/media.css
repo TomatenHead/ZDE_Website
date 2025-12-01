@@ -47,11 +47,16 @@ header {
     border-bottom: 1px solid #00ffaa55;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+header .logo a {
+    display: inline-block;
     color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
     text-shadow: 0 0 8px #00ffaa;
+    padding: 5px 10px;
+    z-index: 10;
+    position: relative;
 }
 
 header nav a {
@@ -62,8 +67,7 @@ header nav a {
     transition: 0.2s;
 }
 
-header nav a:hover,
-header nav a.active {
+header nav a:hover {
     color: #00ffcc;
     text-shadow: 0 0 8px #00ffcc;
 }
