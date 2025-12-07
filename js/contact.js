@@ -1,6 +1,6 @@
 // Copy email on click
 document.getElementById("copyEmail").addEventListener("click", () => {
-    const email = "y-game-studios@gmx.de";
+    const email = "y-game@gmx.de";
 
     navigator.clipboard.writeText(email).then(() => {
         showToast("Email copied to clipboard!");
