@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #0f0f0f;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+/* Navigation buttons with icons */
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn:hover {
+    background: #333;
+    border-color: #555;
+}
+
+/* Ripple effect */
+.ripple {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    from {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 10px;
+    background: linear-gradient(180deg, #111, #222);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* Buttons in Hero Section */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #06f, #0ff);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Secondary button */
+.secondary {
+    background: linear-gradient(135deg, #222, #444);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 35px;
+    padding: 20px 15px;
+    background: #111;
+    border-radius: 15px;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.section p,
+.section ul {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+/* Responsive Tweaks */
+@media (min-width: 600px) {
+    .btn-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-group .btn {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .sticky-nav {
+        justify-content: center;
+        gap: 15px;
+    }
+}
