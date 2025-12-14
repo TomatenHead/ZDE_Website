@@ -128,9 +128,10 @@ body {
 /* Sections */
 .section {
     margin-bottom: 35px;
-    padding: 20px 15px;
-    background: #111;
+    padding: 22px 18px;
+    background: #444444;
     border-radius: 15px;
+    box-sizing: border-box;
 }
 
 .section h2 {
@@ -142,19 +143,15 @@ body {
 .section ul {
     font-size: 1rem;
     opacity: 0.85;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .section ul li {
     margin-bottom: 8px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.5;
-    margin-bottom: 20px;
-}
 
 /* Responsive Tweaks */
 @media (min-width: 600px) {
