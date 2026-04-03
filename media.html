@@ -2,70 +2,317 @@
 <html lang="en">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5397831852572962"
-        crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" name="google-adsense-account"
-        content="ca-pub-5397831852572962" />
-    <title>Zero Day Exploit | Media Gallery</title>
-    <link rel="stylesheet" href="css/media.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Day Exploit</title>
+
+    <style>
+        /* ================================
+   GLOBAL
+================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Consolas, monospace;
+        }
+
+        body {
+            background: #020d0f;
+            color: white;
+            overflow-x: hidden;
+            animation: bgPulse 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes bgPulse {
+            0% {
+                background-color: #001a1a;
+            }
+
+            50% {
+                background-color: #003344;
+            }
+
+            100% {
+                background-color: #004455;
+            }
+        }
+
+        /* ================================
+   GRID BACKGROUND (AAA EFFECT)
+================================ */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(#00ffcc22 1px, transparent 1px),
+                linear-gradient(90deg, #00ffcc22 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        /* ================================
+   HEADER
+================================ */
+        header {
+            padding: 15px 40px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #00ffaa55;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: #aaffee;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        /* ================================
+   HERO
+================================ */
+        .hero {
+            text-align: center;
+            padding: 140px 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: #00ffcc;
+            text-shadow: 0 0 20px #00ffcc;
+            position: relative;
+        }
+
+        /* GLITCH EFFECT */
+        .hero h1::before,
+        .hero h1::after {
+            content: "ZERO DAY EXPLOIT";
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+
+        .hero h1::before {
+            color: red;
+            animation: glitch1 2s infinite;
+        }
+
+        .hero h1::after {
+            color: blue;
+            animation: glitch2 2s infinite;
+        }
+
+        @keyframes glitch1 {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes glitch2 {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(2px, -2px);
+            }
+
+            40% {
+                transform: translate(2px, 2px);
+            }
+
+            60% {
+                transform: translate(-2px, -2px);
+            }
+
+            80% {
+                transform: translate(-2px, 2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .sub {
+            margin-top: 10px;
+            color: #aaffee;
+        }
+
+        /* BUTTON */
+        .cta {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00ffcc;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 15px #00ffcc;
+        }
+
+        .cta:hover {
+            background: #00ffee;
+        }
+
+        /* ================================
+   FEATURES
+================================ */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .card {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ffcc55;
+            box-shadow: 0 0 15px #00ffcc40;
+        }
+
+        /* ================================
+   SLIDER
+================================ */
+        .slider {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            overflow: hidden;
+            border: 2px solid #00ffcc55;
+        }
+
+        .track {
+            display: flex;
+            transition: 0.5s;
+        }
+
+        .track img {
+            width: 100%;
+        }
+
+        /* ================================
+   FOOTER
+================================ */
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.6;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ================================
-         HEADER
-    ================================= -->
     <header>
-        <div class="donate">
-            <a href="https://www.msf.org/donate" target="_blank">
-                <img src="images/donate.png" alt="Donate" style="width: 200px;">
-            </a>
-        </div>
-        <div class="logo">
-            <a href="index.html">Zero Day Exploit</a>
-        </div>
+        <div class="logo">Zero Day Exploit</div>
         <nav>
-            <a href="https://zerodayexplo-gjmcf4rc.manus.space/media">less minimalistic version</a>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html" class="active">Media Gallery</a>
-            <a href="download.html">Download</a>
-            <a href="socials.html">Socials</a>
-            <a href="contact.html">Contact</a>
-            <a href="legal.html">Legal</a>
-            <a href="contribute.html">Contribute</a>
+            <a href="#">Home</a>
+            <a href="#">Media</a>
+            <a href="#">About</a>
         </nav>
     </header>
 
-    <!-- ================================
-         HERO SECTION
-    ================================= -->
     <section class="hero">
-        <h1>Media Gallery</h1>
-        <p>Explore screenshots, concept art, and videos from Zero Day Exploit.</p>
+        <h1>ZERO DAY EXPLOIT</h1>
+        <p class="sub">Hack. Trade. Survive.</p>
+        <a href="#" class="cta">Wishlist on Steam</a>
     </section>
 
-    <!-- ================================
-         MEDIA GALLERY
-    ================================= -->
-    <section class="gallery">
-        <div class="media-grid">
-            <!-- Platzhalterbilder -->
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 1">
-            </div>
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 2">
-            </div>
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 3">
-            </div>
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 4">
-            </div>
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 5">
-            </div>
-            <div class="media-item"><img src="images/favicon.png" alt="Screenshot 6">
-            </div>
+    <section class="features">
+        <h2>Features</h2>
+        <div class="grid">
+            <div class="card">Open Gameplay</div>
+            <div class="card">Hacking System</div>
+            <div class="card">Underground Economy</div>
+            <div class="card">Multiple Endings</div>
         </div>
     </section>
+
+    <section class="slider">
+        <div class="track" id="track"></div>
+    </section>
+
+    <footer>
+        Coming Soon on Steam
+    </footer>
+
+    <script>
+        let track = document.getElementById("track");
+        let index = 1;
+        let images = [];
+        let current = 0;
+
+        function load() {
+            let img = new Image();
+            img.src = "images/screenshot" + index + ".png";
+
+            img.onload = () => {
+                images.push(img.src);
+                let el = document.createElement("img");
+                el.src = img.src;
+                track.appendChild(el);
+                index++;
+                load();
+            };
+
+            img.onerror = () => start();
+        }
+
+        function start() {
+            setInterval(() => {
+                current++;
+                if (current >= images.length) current = 0;
+                track.style.transform = "translateX(-" + current * 100 + "%)";
+            }, 3000);
+        }
+
+        load();
+    </script>
 
 </body>
 
