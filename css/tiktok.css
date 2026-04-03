@@ -1,218 +1,153 @@
-/* Reset */
+/* Mobile-first landing page theme */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: 'Arial', sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    line-height: 1.5;
-    padding: 15px;
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(180deg, #02080f 0%, #030a13 42%, #070f1d 100%);
+    color: #eef8ff;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Sticky Navigation */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    background: #0f0f0f;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    z-index: 1000;
-    border-bottom: 1px solid #222;
-}
-
-/* Navigation buttons with icons */
-.nav-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 8px;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    transition: 0.2s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-btn:hover {
-    background: #333;
-    border-color: #555;
-}
-
-/* Ripple effect */
-.ripple {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: rippleAnim 0.6s linear;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 10%, rgba(94, 231, 208, 0.08), transparent 24%),
+        radial-gradient(circle at 80% 20%, rgba(76, 150, 255, 0.07), transparent 30%);
     pointer-events: none;
 }
 
-@keyframes rippleAnim {
-    from {
-        transform: scale(0);
-        opacity: 0.6;
-    }
-
-    to {
-        transform: scale(3);
-        opacity: 0;
-    }
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(2, 8, 18, 0.96);
+    border-bottom: 1px solid rgba(94, 231, 208, 0.16);
 }
 
-/* Hero Section */
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #eff8ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.nav-btn:hover {
+    background: rgba(94, 231, 208, 0.16);
+    transform: translateY(-1px);
+}
+
 .hero {
+    padding: 50px 22px;
     text-align: center;
-    padding: 50px 10px;
-    background: linear-gradient(180deg, #111, #222);
-    border-radius: 20px;
-    margin-bottom: 30px;
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: clamp(2rem, 8vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
 }
 
 .hero p {
-    font-size: 1rem;
-    margin-bottom: 25px;
-    opacity: 0.8;
+    margin-top: 18px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.9;
+    color: #bacfe0;
 }
 
-/* Buttons in Hero Section */
 .btn-group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-top: 28px;
+    display: grid;
+    gap: 14px;
+    padding: 0 10px;
 }
 
 .btn {
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    padding: 16px 18px;
+    border-radius: 999px;
+    color: #020b14;
+    font-weight: 700;
+    background: linear-gradient(135deg, #5ee7d0, #4c96ff);
     text-decoration: none;
-    text-align: center;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #06f, #0ff);
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 18px 42px rgba(94, 231, 208, 0.18);
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.primary {
+    width: 100%;
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #eef8ff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+    transform: translateY(-2px);
 }
 
-/* Secondary button */
-.secondary {
-    background: linear-gradient(135deg, #222, #444);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Sections */
 .section {
-    margin-bottom: 35px;
-    padding: 22px 18px;
-    background: #444444;
-    border-radius: 15px;
-    box-sizing: border-box;
+    padding: 24px 18px;
+    margin: 18px 10px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(94, 231, 208, 0.12);
 }
 
 .section h2 {
+    margin-bottom: 14px;
     font-size: 1.4rem;
-    margin-bottom: 12px;
+    color: #ecfeff;
 }
 
 .section p,
+.section li {
+    color: #cee6f5;
+    line-height: 1.85;
+}
+
 .section ul {
-    font-size: 1rem;
-    opacity: 0.85;
-    line-height: 1.5;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    list-style: disc;
+    margin-left: 20px;
 }
 
-.section ul li {
-    margin-bottom: 8px;
+.hero,
+.section {
+    backdrop-filter: blur(16px);
 }
 
+footer {
+    margin-top: 24px;
+    padding: 28px 16px;
+    text-align: center;
+    color: #8cc7db;
+    font-size: 0.95rem;
+}
 
-/* Responsive Tweaks */
-@media (min-width: 600px) {
+@media (min-width: 680px) {
     .btn-group {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .btn-group .btn {
-        width: auto;
-        min-width: 150px;
-    }
-
-    .sticky-nav {
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 900px) {
-    .sticky-nav {
-        justify-content: center;
-        gap: 10px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 680px) {
-    body {
-        font-size: 15px;
-    }
-
-    .sticky-nav {
-        padding: 12px 10px;
-    }
-
-    .nav-btn,
-    .btn {
-        width: 100%;
-    }
-
-    .hero {
-        padding: 36px 16px;
-    }
-
-    .hero h1 {
-        font-size: 1.9rem;
-    }
-
-    .section {
-        padding: 18px 16px;
-        border-radius: 18px;
-        margin: 0 0 18px;
-    }
-
-    .btn-group {
-        gap: 12px;
-    }
-
-    .widget-buttons {
-        margin-top: 24px;
-        padding: 0 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

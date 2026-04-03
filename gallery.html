@@ -4,45 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zero Day Exploit | Screenshot Gallery</title>
+    <title>Zero Day Exploit | Gallery</title>
+    <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/gallery.css" />
 </head>
 
 <body>
     <div class="page-shell">
-        <header class="hero-header">
+        <header class="topbar">
             <div class="brand">
-                <span class="brand-mark">ZDE</span>
-                <div>
-                    <p class="eyebrow">Screenshot Gallery</p>
-                    <h1>Immersive Visual Preview</h1>
-                </div>
+                <a class="brand-logo" href="index.html">Zero Day Exploit</a>
+                <span class="brand-subtitle">Screenshot gallery</span>
             </div>
-            <nav class="hero-nav">
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="index.html">Home</a>
+                <a href="about.html">About</a>
                 <a href="media.html">Media</a>
                 <a href="gallery.html" class="active">Gallery</a>
+                <a href="download.html">Download</a>
+                <a href="socials.html">Socials</a>
                 <a href="contact.html">Contact</a>
+                <a href="legal.html">Legal</a>
+                <a href="contribute.html">Contribute</a>
             </nav>
+            <a class="donate-link" href="https://www.msf.org/donate" target="_blank" rel="noreferrer noopener">Support
+                MSF</a>
         </header>
 
         <main>
-            <section class="intro-panel">
-                <div>
-                    <p class="eyebrow">Automatic gallery • premium cinematic layout</p>
-                    <h2>Browse every screenshot in a seamless, infinite scroll.</h2>
-                    <p class="description">Hover to zoom, use arrow keys, or enable auto-scroll for a cinematic preview
-                        of the world of Zero Day Exploit.</p>
-                </div>
-                <div class="status-panel">
-                    <div class="status-item">
-                        <span id="image-count">0</span>
-                        <p>Images loaded</p>
-                    </div>
-                    <div class="status-item">
-                        <span id="active-index">—</span>
-                        <p>Current slide</p>
-                    </div>
+            <section class="gallery-hero">
+                <div class="badge">Infinite carousel</div>
+                <h1>Swipe through cinematic screenshot previews.</h1>
+                <p>The gallery automatically detects screenshot files and creates a seamless infinite loop. Use the
+                    controls or arrow keys to move through the images.</p>
+            </section>
+
+            <section class="section">
+                <div class="grid">
+                    <article class="card">
+                        <h3>Auto-detect</h3>
+                        <p>The gallery finds available images inside the <code>screenshots/</code> folder and loads them
+                            automatically.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Keyboard ready</h3>
+                        <p>Navigate with left and right arrows for quick browsing.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Auto-scroll</h3>
+                        <p>Press the auto-scroll button to let the carousel run by itself in cinematic mode.</p>
+                    </article>
                 </div>
             </section>
 
@@ -58,16 +69,16 @@
                 </div>
 
                 <div class="hint-row">
-                    <span>Use left / right arrow keys</span>
-                    <span>Hover an image to zoom</span>
+                    <span id="active-index">0 / 0</span>
+                    <span id="image-count">0 images detected</span>
                 </div>
+
+                <div id="fallbackPanel" style="display:none;"></div>
             </section>
         </main>
-    </div>
 
-    <div class="fallback-panel" id="fallbackPanel">
-        <p>No screenshots were found in <code>screenshots/</code>. Please add files named <code>screenshot1.png</code>,
-            <code>screen2.png</code>, etc.</p>
+        <footer class="footer">Add screenshot1.png, screenshot2.jpg, or screen3.png to the screenshots folder to
+            populate the carousel.</footer>
     </div>
 
     <script src="js/gallery.js"></script>
