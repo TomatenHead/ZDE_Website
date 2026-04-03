@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Day Exploit | Screenshot Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="hero-header">
+            <div class="brand">
+                <span class="brand-mark">ZDE</span>
+                <div>
+                    <p class="eyebrow">Screenshot Gallery</p>
+                    <h1>Immersive Visual Preview</h1>
+                </div>
+            </div>
+            <nav class="hero-nav">
+                <a href="index.html">Home</a>
+                <a href="media.html">Media</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro-panel">
+                <div>
+                    <p class="eyebrow">Automatic gallery • premium cinematic layout</p>
+                    <h2>Browse every screenshot in a seamless, infinite scroll.</h2>
+                    <p class="description">Hover to zoom, use arrow keys, or enable auto-scroll for a cinematic preview
+                        of the world of Zero Day Exploit.</p>
+                </div>
+                <div class="status-panel">
+                    <div class="status-item">
+                        <span id="image-count">0</span>
+                        <p>Images loaded</p>
+                    </div>
+                    <div class="status-item">
+                        <span id="active-index">—</span>
+                        <p>Current slide</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-shell">
+                <div class="gallery-frame" aria-label="Screenshot carousel" tabindex="0">
+                    <div class="gallery-track" id="galleryTrack"></div>
+                </div>
+
+                <div class="controls">
+                    <button class="control-btn" id="prevBtn" aria-label="Previous screenshot">← Prev</button>
+                    <button class="control-btn" id="toggleAuto" aria-label="Toggle auto scroll">Auto Scroll</button>
+                    <button class="control-btn" id="nextBtn" aria-label="Next screenshot">Next →</button>
+                </div>
+
+                <div class="hint-row">
+                    <span>Use left / right arrow keys</span>
+                    <span>Hover an image to zoom</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="fallback-panel" id="fallbackPanel">
+        <p>No screenshots were found in <code>screenshots/</code>. Please add files named <code>screenshot1.png</code>,
+            <code>screen2.png</code>, etc.</p>
+    </div>
+
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>

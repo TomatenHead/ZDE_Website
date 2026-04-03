@@ -27,17 +27,27 @@ header .logo a {
     position: relative;
 }
 
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 header nav a {
-    margin-left: 20px;
+    margin: 0;
     text-decoration: none;
     color: #aaffee;
     font-size: 15px;
     transition: 0.2s;
+    padding: 8px 10px;
+    border-radius: 12px;
 }
 
 header nav a:hover {
     color: #00ffcc;
     text-shadow: 0 0 8px #00ffcc;
+    background: rgba(93, 228, 208, 0.08);
 }
 
 /* Contribute page boxes */
@@ -94,4 +104,37 @@ th {
 
 tr:hover {
     background: #002222;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 18px 20px;
+    }
+
+    header .logo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        font-size: 15px;
+    }
+
+    .contribute-section {
+        width: min(100%, 1000px);
+        padding: 0 16px 80px;
+    }
+
+    .contrib-box {
+        padding: 18px;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
 }
