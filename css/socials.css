@@ -65,17 +65,27 @@ header .logo a {
     position: relative;
 }
 
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 header nav a {
-    margin-left: 20px;
+    margin: 0;
     text-decoration: none;
     color: #aaffee;
     font-size: 15px;
     transition: 0.2s;
+    padding: 8px 10px;
+    border-radius: 12px;
 }
 
 header nav a:hover {
     color: #00ffcc;
     text-shadow: 0 0 8px #00ffcc;
+    background: rgba(93, 228, 208, 0.08);
 }
 
 
@@ -123,4 +133,37 @@ header nav a:hover {
 .cta-btn:hover {
     background: #00ffee;
     box-shadow: 0 0 14px #00ffee;
+}
+
+@media (max-width: 900px) {
+    .sticky-nav {
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 45px 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section,
+    .sticky-nav,
+    .widget-buttons {
+        padding: 18px 16px;
+    }
+
+    .nav-btn,
+    .cta-btn {
+        width: 100%;
+    }
 }
